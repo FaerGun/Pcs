@@ -1,10 +1,12 @@
-# untitled
+# Практитка 1
 
 A new Flutter project.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+1. запуск проекта в веб режиме
+![image](https://github.com/user-attachments/assets/8e23b5fc-b7b9-40e5-b912-c43948ee936c)
 
 A few resources to get you started if this is your first Flutter project:
 
