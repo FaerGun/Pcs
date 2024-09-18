@@ -36,11 +36,11 @@ class _AuthPageState extends State<AuthPage> {
           height: 50,
           alignment: Alignment.center,
           child: Text(
-            'Auth',
+            'Авторизация',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.green,
         toolbarHeight: 30,
       ),
       body: Center(
@@ -55,10 +55,10 @@ class _AuthPageState extends State<AuthPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Email'),
+                      decoration: InputDecoration(labelText: 'Почта'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your email';
+                          return 'Пожалуйста, введите e-mail';
                         }
                         return null;
                       },
@@ -68,11 +68,11 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                     SizedBox(height: 20),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Password'),
+                      decoration: InputDecoration(labelText: 'Пароль'),
                       obscureText: true,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your password';
+                          return 'Пожалуйста, введите пароль';
                         }
                         return null;
                       },
@@ -91,10 +91,10 @@ class _AuthPageState extends State<AuthPage> {
                             });
                           },
                         ),
-                        Text('Remember me'),
+                        Text('Запомнить меня'),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 30),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -106,7 +106,7 @@ class _AuthPageState extends State<AuthPage> {
                             );
                           }
                         },
-                        child: Text('Login'),
+                        child: Text('Логин'),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -119,7 +119,7 @@ class _AuthPageState extends State<AuthPage> {
                             SnackBar(content: Text('Navigating to Register...')),
                           );
                         },
-                        child: Text('Register'),
+                        child: Text('Регистрация'),
                         style: ElevatedButton.styleFrom(
                         ),
                       ),
@@ -133,8 +133,8 @@ class _AuthPageState extends State<AuthPage> {
                         );
                       },
                       child: Text(
-                        'Recover Password',
-                        style: TextStyle(color: Colors.grey), // Цвет текста
+                        'Сбросить пароль',
+                        style: TextStyle(color: Colors.grey),
                       ),
                     ),
                   ],
