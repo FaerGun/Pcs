@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Authentication Page',
+      title: 'Страница авторизации',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -36,11 +36,11 @@ class _AuthPageState extends State<AuthPage> {
           height: 50,
           alignment: Alignment.center,
           child: Text(
-            'Auth',
+            'Авторизация',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.green,
         toolbarHeight: 30,
       ),
       body: Center(
@@ -55,10 +55,10 @@ class _AuthPageState extends State<AuthPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Email'),
+                      decoration: InputDecoration(labelText: 'E-mail'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your email';
+                          return 'Пожалуйста, введите e-mail';
                         }
                         return null;
                       },
@@ -68,11 +68,11 @@ class _AuthPageState extends State<AuthPage> {
                     ),
                     SizedBox(height: 20),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Password'),
+                      decoration: InputDecoration(labelText: 'Пароль'),
                       obscureText: true,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your password';
+                          return 'Пожалуйста, введите пароль';
                         }
                         return null;
                       },
@@ -80,7 +80,7 @@ class _AuthPageState extends State<AuthPage> {
                         _password = value;
                       },
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 26),
                     Row(
                       children: [
                         Checkbox(
@@ -102,7 +102,7 @@ class _AuthPageState extends State<AuthPage> {
                           if (_formKey.currentState!.validate()) {
 
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Logging in...')),
+                              SnackBar(content: Text('Авторизация')),
                             );
                           }
                         },
@@ -116,25 +116,25 @@ class _AuthPageState extends State<AuthPage> {
                         onPressed: () {
 
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Navigating to Register...')),
+                            SnackBar(content: Text('Навигация регистрации...')),
                           );
                         },
-                        child: Text('Register'),
+                        child: Text('Регистрация'),
                         style: ElevatedButton.styleFrom(
                         ),
                       ),
                     ),
-                    SizedBox(height: 10), // Отступ перед текстовой кнопкой
+                    SizedBox(height: 10), 
                     TextButton(
                       onPressed: () {
 
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Navigating to Recover Password...')),
+                          SnackBar(content: Text('Навигация по замене пароля...')),
                         );
                       },
                       child: Text(
-                        'Recover Password',
-                        style: TextStyle(color: Colors.grey), // Цвет текста
+                        'Забыли пароль?',
+                        style: TextStyle(color: Colors.grey), 
                       ),
                     ),
                   ],
