@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Authentication Page',
+      title: 'Страница авторизации',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -55,7 +55,7 @@ class _AuthPageState extends State<AuthPage> {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Почта'),
+                      decoration: InputDecoration(labelText: 'E-mail'),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
                           return 'Пожалуйста, введите e-mail';
@@ -80,7 +80,7 @@ class _AuthPageState extends State<AuthPage> {
                         _password = value;
                       },
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 26),
                     Row(
                       children: [
                         Checkbox(
@@ -94,7 +94,7 @@ class _AuthPageState extends State<AuthPage> {
                         Text('Запомнить меня'),
                       ],
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: 20),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -102,11 +102,11 @@ class _AuthPageState extends State<AuthPage> {
                           if (_formKey.currentState!.validate()) {
 
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Logging in...')),
+                              SnackBar(content: Text('Авторизация')),
                             );
                           }
                         },
-                        child: Text('Логин'),
+                        child: Text('Авторизация'),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -116,7 +116,7 @@ class _AuthPageState extends State<AuthPage> {
                         onPressed: () {
 
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Navigating to Register...')),
+                            SnackBar(content: Text('Навигация регистрации...')),
                           );
                         },
                         child: Text('Регистрация'),
@@ -124,17 +124,17 @@ class _AuthPageState extends State<AuthPage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10), // Отступ перед текстовой кнопкой
+                    SizedBox(height: 10), 
                     TextButton(
                       onPressed: () {
 
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Navigating to Recover Password...')),
+                          SnackBar(content: Text('Навигация по замене пароля...')),
                         );
                       },
                       child: Text(
-                        'Сбросить пароль',
-                        style: TextStyle(color: Colors.grey),
+                        'Забыли пароль?',
+                        style: TextStyle(color: Colors.grey), 
                       ),
                     ),
                   ],
