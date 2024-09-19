@@ -91,7 +91,7 @@ class _AuthPageState extends State<AuthPage> {
                             });
                           },
                         ),
-                        Text('Remember me'),
+                        Text('Запомнить меня'),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -106,7 +106,7 @@ class _AuthPageState extends State<AuthPage> {
                             );
                           }
                         },
-                        child: Text('Login'),
+                        child: Text('Авторизация'),
                       ),
                     ),
                     SizedBox(height: 10),
