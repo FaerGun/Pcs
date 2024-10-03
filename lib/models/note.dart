@@ -80,3 +80,7 @@ List<Gear> gears = [
 
   ),
 ];
+
+void removeSweet(Gear gear) {
+  gears.remove(gear);
+}

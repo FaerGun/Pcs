@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import '../models/note.dart';
 
 class ProductDetailPage extends StatelessWidget {
-  final  Gear gear;
+  final Gear gear;
+  final VoidCallback onDelete;
 
-  const ProductDetailPage({super.key, required this.gear});
+  const ProductDetailPage({super.key, required this.gear, required this.onDelete});
   final textFont = const TextStyle(fontSize: 20);
+
+  void _deleteProduct(BuildContext context) {
+    gears.remove(gear);
+    onDelete();
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +62,21 @@ class ProductDetailPage extends StatelessWidget {
                 style: textFont,
               ),
             ),
+            const SizedBox(height: 20),
+            Center(
+              child: ElevatedButton.icon(
+                onPressed: () => _deleteProduct(context),
+                icon: const Icon(Icons.delete),
+                label: const Text('Убрать'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.pink,
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
