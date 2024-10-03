@@ -17,6 +17,11 @@
 2. авторизация на эмуляторе 
 ![image](https://github.com/user-attachments/assets/794e6c41-d574-4140-a1eb-c68c316722ee)
 
+# Практика 3
+1. Зпуск через веб приложения "Все для улова от рыболова"
+![image](https://github.com/user-attachments/assets/dcd4e639-34ed-437c-8c2d-28c7e5583cfe)
+![image](https://github.com/user-attachments/assets/e7773bb0-ddd4-4920-9ca4-64bad2daf381)
+
 
 
 
