@@ -30,6 +30,13 @@
 ![image](https://github.com/user-attachments/assets/b1e2bee7-f3f5-42f0-aae8-4ea6cbd498dd)
 И вот как выглядит в каталоге
 ![image](https://github.com/user-attachments/assets/41ee2a86-e7c2-47ba-b3fd-ce1ea6528cd9)
+# Практика 5
+пкс
+добавление кнопок
+![image](https://github.com/user-attachments/assets/db140a77-28c3-4608-b800-2df3159dbe75)
+![image](https://github.com/user-attachments/assets/81b0ee9e-f48a-4218-8ff5-ad5150e61664)
+![image](https://github.com/user-attachments/assets/431a99d3-7bb3-4e4d-ab6f-bd783e031bab)
+
 
 
 
