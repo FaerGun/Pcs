@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
-import '../page/note.dart';
 import '../models/note.dart';
 import '../components/item.dart';
+import '../page/note.dart';
 
 class HomePage extends StatefulWidget {
+  final Set<Gear> favoriteGears;
+  final Function(Gear, bool) onFavoriteChanged;
+
+  const HomePage({
+    Key? key,
+    required this.favoriteGears,
+    required this.onFavoriteChanged,
+  }) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -16,6 +25,11 @@ class _HomePageState extends State<HomePage> {
   final _brandController = TextEditingController();
   final _flavorController = TextEditingController();
 
+
+  void _toggleFavorite(Gear gear) {
+    final isFavorite = widget.favoriteGears.contains(gear);
+    widget.onFavoriteChanged(gear, !isFavorite);
+  }
 
   void _addNewGear() {
     setState(() {
@@ -41,7 +55,7 @@ class _HomePageState extends State<HomePage> {
 
   }
 
-  void _showAddSweetDialog(BuildContext context) {
+  void _showAddGearDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -61,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextField(
                   controller: _imageUrlController,
-                  decoration: const InputDecoration(labelText: 'Изображение'),
+                  decoration: const InputDecoration(labelText: 'URL изображения'),
                 ),
                 TextField(
                   controller: _priceController,
@@ -74,9 +88,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 TextField(
                   controller: _flavorController,
-                  decoration: const InputDecoration(labelText: 'Категория'),
+                  decoration: const InputDecoration(labelText: 'Вкус'),
                 ),
-
               ],
             ),
           ),
@@ -99,40 +112,60 @@ class _HomePageState extends State<HomePage> {
       },
     );
   }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Center(
-          child: Text(
-            'Все для улова от рыболова',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
+        backgroundColor: Colors.lightGreen,
+        title: const Text('Все для улова от рыболова'),
       ),
-      body: ListView.builder(
-        itemCount: gears.length,
+      body: GridView.builder(
+        itemCount:gears.length,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 10.0,
+          mainAxisSpacing: 10.0,
+          childAspectRatio: 2 / 3,
+        ),
         itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ProductDetailPage(
-                    gear: gears[index],
-                    onDelete: () => setState(() {}),
+          final gear = gears[index];
+          final isFavorite = widget.favoriteGears.contains(gear);
+
+          return Stack(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProductDetailPage(
+                        gear: gear,
+                        onDelete: () => setState(() {}),
+                      ),
+                    ),
+                  );
+                },
+                child: Item(gear: gear),
+              ),
+              Positioned(
+                top: 8,
+                right: 8,
+                child: IconButton(
+                  icon: Icon(
+                    isFavorite ? Icons.favorite : Icons.favorite_border,
+                    color: isFavorite ? Colors.red : Colors.grey,
                   ),
+                  onPressed: () {
+                    _toggleFavorite(gear);
+                    setState(() {});
+                  },
                 ),
-              );
-            },
-            child: Item(gear: gears[index]),
+              ),
+            ],
           );
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => _showAddSweetDialog(context),
-        child: const Icon(Icons.add),
       ),
     );
   }

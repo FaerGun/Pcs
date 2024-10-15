@@ -13,9 +13,11 @@ class Item extends StatelessWidget {
     return Card(
       elevation: 5,
       margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      child: Padding(
+      child: Container(
+        height: 1500,
         padding: const EdgeInsets.all(8.0),
-        child: Row(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.network(
               gear.imageUrl,
@@ -23,22 +25,26 @@ class Item extends StatelessWidget {
               height: 100,
               fit: BoxFit.cover,
             ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    gear.name,
-                    style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 10),
-                  Text(gear.description),
-                  const SizedBox(height: 10),
-                  Text('Цена: ${gear.price} рублей'),
-                ],
+            const SizedBox(height: 10),
+            Text(
+              gear.name,
+              style: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 5),
+            Text(
+              gear.description,
+              style: const TextStyle(fontSize: 14),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 5),
+            Text(
+              'Цена: ${gear.price} рублей',
+              style: const TextStyle(fontSize: 14),
+              textAlign: TextAlign.center,
             ),
           ],
         ),
