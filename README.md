@@ -21,6 +21,16 @@
 1. Зпуск через веб приложения "Все для улова от рыболова"
 ![image](https://github.com/user-attachments/assets/dcd4e639-34ed-437c-8c2d-28c7e5583cfe)
 ![image](https://github.com/user-attachments/assets/e7773bb0-ddd4-4920-9ca4-64bad2daf381)
+# Практика 4
+Задание.
+запуск с веб приложения
+Добавил "добавить товар"
+![image](https://github.com/user-attachments/assets/ea1a319b-576f-4d6f-a7f8-a148af515b74)
+Здесь удаление товара
+![image](https://github.com/user-attachments/assets/b1e2bee7-f3f5-42f0-aae8-4ea6cbd498dd)
+И вот как выглядит в каталоге
+![image](https://github.com/user-attachments/assets/41ee2a86-e7c2-47ba-b3fd-ce1ea6528cd9)
+
 
 
 
