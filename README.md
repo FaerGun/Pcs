@@ -37,8 +37,11 @@
 ![image](https://github.com/user-attachments/assets/81b0ee9e-f48a-4218-8ff5-ad5150e61664)
 ![image](https://github.com/user-attachments/assets/431a99d3-7bb3-4e4d-ab6f-bd783e031bab)
 
-
-
+# Практика 6
+Шведов Павел Денисович
+Редактирование профиля
+![image](https://github.com/user-attachments/assets/0a2b5c5e-6dd9-44ba-a86e-5920c1e46c12)
+![image](https://github.com/user-attachments/assets/37f6a93d-4bbc-41c3-965d-bfe940dd6d42)
 
 
 
