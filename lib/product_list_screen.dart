@@ -20,7 +20,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Products'),
+        title: Text('Каталог'),
       ),
       body: FutureBuilder<List<Product>>(
         future: _products,
