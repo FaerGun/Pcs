@@ -47,7 +47,7 @@
 ![image](https://github.com/user-attachments/assets/daa7ca2c-d7b0-4ce5-8939-8397c6632da0)
 ![image](https://github.com/user-attachments/assets/f05768cc-c2c0-4c5f-94bb-992233c9da04)
 операции
-# Практика 10
+# Практика 11
 Шведов Павел Денисович
 Регистрация в приложении с поддержкой supabase
 ![image](https://github.com/user-attachments/assets/a02833f0-c440-4c72-b7ac-d9baa02d3fcd)
