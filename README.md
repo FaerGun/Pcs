@@ -42,7 +42,7 @@
 Редактирование профиля
 ![image](https://github.com/user-attachments/assets/0a2b5c5e-6dd9-44ba-a86e-5920c1e46c12)
 ![image](https://github.com/user-attachments/assets/37f6a93d-4bbc-41c3-965d-bfe940dd6d42)
-#Праиктика 8 - 9
+# Практика 8 - 9
 Шведов Павел Денисович
 ![image](https://github.com/user-attachments/assets/daa7ca2c-d7b0-4ce5-8939-8397c6632da0)
 ![image](https://github.com/user-attachments/assets/f05768cc-c2c0-4c5f-94bb-992233c9da04)
